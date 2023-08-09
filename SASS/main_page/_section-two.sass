@@ -1,0 +1,116 @@
+@use '../variables' as v
+    
+.section-two
+    margin-top: 30px
+    padding: 0 25px
+
+    h2
+        color: v.$Secondary-Text
+    
+    .boxes-container
+        margin-top: 30px
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: 15px
+
+    .box
+        padding: 25px
+        width: 325px
+        height: 125px
+        background-color: v.$Card-BG
+        border-radius: 8px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        &:hover
+            cursor: pointer
+
+        .box__part1-container
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            p
+                color: v.$Secondary-Text
+                font-weight: 700
+
+        .box__part2-container
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            h3
+                color: v.$Main-Text
+                font-size: 3rem
+
+            .part2-container__percentage-container
+                display: flex
+                align-items: center
+
+                img
+                    margin: 2px 4px 0 0
+                    width: 8px
+                    height: 4px
+
+                p
+                    color: v.$Lime-Green
+                    font-weight: 700
+                    font-size: 1.3rem
+    
+    .box-2,
+    .box-7,
+    .box-8
+        .box__part2-container
+            .part2-container__percentage-container
+                p
+                    color: v.$Bright-Red
+
+
+
+
+// !===========BreakPoints===========
+@media (min-width: 1200px)
+    .main-container
+        padding: 0 130px
+        
+
+    .section-two
+        margin-top: 55px
+        padding: 0 0 60px 0
+
+        h2
+            font-size: 2.7rem
+        
+        .boxes-container
+            gap: 25px
+
+            .box
+                width: 250px
+
+                &:hover
+                    cursor: pointer
+                    background-color: v.$Card-BG-Hover
+                    transition: 0.3s
+
+@media (min-width: 1440px)
+    .main-container
+        padding: 0 180px
+
+
+// !==============DARK MODE==============
+.darkmode h2
+    color: v.$Main-Text-dark
+
+.darkmode .section-two .box
+    background-color: v.$Card-BG-dark
+
+.darkmode .section-two .box .box__part1-container p
+    color: v.$Secondary-Text-dark
+
+.darkmode .section-two .box .box__part2-container h3
+    color: v.$Main-Text-dark
+
+.darkmode .section-two .box:hover
+    background-color: v.$Card-BG-dark-hover

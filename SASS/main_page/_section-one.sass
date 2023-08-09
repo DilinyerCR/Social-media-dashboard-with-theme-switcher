@@ -1,0 +1,114 @@
+@use '../variables' as v
+
+.section-one
+    padding: 10px 25px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 25px
+
+    .box
+        width: 325px
+        height: 215px
+        padding: 28px 0
+        border-top: 4px solid v.$Facebook
+        background-color: v.$Card-BG
+        border-radius: 8px
+        text-align: center
+
+        &:hover
+            cursor: pointer
+            background-color: v.$Card-BG-Hover
+            transition: 0.3s
+        
+        .box__social-network-container
+            display: flex
+            justify-content: center
+            align-items: center
+
+            p
+                margin: 0 4px
+                color: v.$Secondary-Text
+                font-size: 1.2rem
+                font-weight: 700
+
+            img
+                margin: 0 4px
+
+        .box__followers-container
+            margin-top: 22px
+
+            h3
+                color: v.$Main-Text
+                font-size: 5rem
+
+            p
+                color: v.$Secondary-Text
+                font-size: 1.2rem
+                letter-spacing: 4px
+                text-transform: uppercase
+
+        .box__today-container
+            margin-top: 22px
+            display: flex
+            justify-content: center
+            align-items: center
+
+            p
+                margin: 0 3px
+                color: v.$Lime-Green
+                font-size: 1.2rem
+                font-weight: 700
+
+            img
+                margin: 0 3px
+                width: 8px
+                height: 4px
+            .youtube
+                color: v.$Bright-Red
+
+    .box-2
+        border-top: 4px solid v.$Twitter
+    
+    .yolo
+        border-radius: 8px
+        overflow: hidden
+        
+        .box-3
+            border-top: 4px solid
+            border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%))
+            border-image-slice: 0.5
+
+    .box-4
+        border-top: 4px solid v.$YouTube
+
+
+
+// !===========BreakPoints===========
+@media (min-width: 1200px)
+    .main-container
+        padding: 0 130px
+
+    .section-one
+        padding: 0
+        gap: 25px
+
+        .box
+            width: 250px
+
+
+// !==============DARK MODE==============
+.darkmode .box
+    background-color: v.$Card-BG-dark
+
+.darkmode .box .box__followers-container h3
+    color: v.$Main-Text-dark
+
+.darkmode .box .box__followers-container p
+    color: v.$Secondary-Text-dark
+
+.darkmode .box .box__social-network-container p
+    color: v.$Secondary-Text-dark
+
+.darkmode .box:hover
+    background-color: v.$Card-BG-dark-hover

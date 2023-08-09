@@ -1,0 +1,34 @@
+@use 'variables' as v
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body
+    font-family: v.$Inter
+    font-size: 1.4rem
+
+main
+    width: 100%
+    background-color: v.$BG
+    position: relative
+
+.main-container
+    padding: 0 0 50px 0
+    position: absolute
+    top: -52px
+
+@media (min-width: 768px)
+    .main-container
+        top: -95px
+
+.darkmode
+    background-color: v.$BG-dark
+
+
+
+

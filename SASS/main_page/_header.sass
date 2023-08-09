@@ -1,0 +1,108 @@
+@use '../variables' as v
+
+header
+    height: 240px
+    background-color: v.$Top-BG-Pattern
+    padding: 40px 25px
+    border-radius: 0 0 20px 20px
+
+    h1
+        margin-bottom: 5px
+        color: v.$Main-Text
+        font-size: 2.3rem
+
+    p   
+        color: v.$Secondary-Text
+        font-size: 1.2rem
+        font-weight: 700
+
+    .line
+        margin: 25px 0
+        width: 100%
+        border-bottom: 1px solid
+
+    .header__dark-mode-container
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        button
+            padding: 2px 4px
+            width: 50px
+            height: 25px
+            display: flex
+            justify-content: right
+            align-items: center
+            background-color: v.$Toggle
+            border-radius: 50px
+            border: none
+            
+
+            &:hover
+                cursor: pointer
+                background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))
+            
+
+        .ball
+            width: 18px
+            height: 18px
+            background-color: v.$BG
+            border-radius: 50%
+            transition: transform 0.2s ease-in-out
+
+
+
+// !===========BreakPoints===========
+@media (min-width: 768px)
+    header
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+        .line
+            display: none
+
+        .header__dark-mode-container
+            width: 130px
+
+@media (min-width: 1200px)
+    header
+        padding: 40px 130px 0 130px
+
+        .header__title-container
+            h1
+                font-size: 3rem
+
+            p
+                font-size: 1.4rem
+
+        .header__dark-mode-container
+            margin-top: 15px
+            width: 140px
+
+            p
+                font-size: 1.4rem
+
+
+@media (min-width: 1440px)
+    header
+        padding: 40px 180px 0 180px
+
+
+// !==============DARK MODE==============
+.darkmode header
+    background-color: v.$Top-BG-Pattern-dark
+
+.darkmode h1
+    color: v.$Main-Text-dark
+
+.darkmode p
+    color: v.$Secondary-Text-dark
+
+// .darkmode button
+//     background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))
+
+.darkmode button .ball
+    background-color: v.$Top-BG-Pattern-dark
+
+    
